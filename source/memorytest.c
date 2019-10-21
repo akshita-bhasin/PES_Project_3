@@ -89,7 +89,7 @@ uint32_t * verify_pattern(uint32_t * loc, size_t length, int8_t seed){
 	if(verify_success==1)
 		verify_arr[0]=0;
 
-	log_data((uint8_t *)verify_arr, j+1);
+	log_integer(verify_arr, 2);
 
 	return verify_arr;
 }

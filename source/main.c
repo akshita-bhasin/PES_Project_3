@@ -18,13 +18,34 @@ int main(void) {
 	BOARD_InitBootPeripherals();
 	BOARD_InitDebugConsole();
 #endif
+
+#ifdef KL25Z_LOG
+	BOARD_InitBootPins();
+	BOARD_InitBootClocks();
+	BOARD_InitBootPeripherals();
+	BOARD_InitDebugConsole();
+#endif
 	const int8_t seed = 8;
 
 	uint32_t * valuesNoMatch = NULL;
-	log_enable();
 #ifdef KL25Z
 	turn_on_led_color('B');
+	log_disable();
 #endif
+
+#ifdef PC
+	log_disable();
+#endif
+
+#ifdef KL25Z_LOG
+	turn_on_led_color('B');
+	log_enable();
+#endif
+
+#ifdef PC_LOG
+	log_enable();
+#endif
+
 	log_string("Allocating 16 bytes of data");
   	uint32_t * mem = allocate_words(LENGTH);
   	uint32_t offset = (uint32_t) 0x0004;

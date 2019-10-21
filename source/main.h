@@ -18,6 +18,14 @@
 #include "MKL25Z4.h"
 #include "fsl_debug_console.h"
 #endif
+#ifdef KL25Z_LOG
+#include "led_blink.h"
+#include "board.h"
+#include "peripherals.h"
+#include "pin_mux.h"
+#include "MKL25Z4.h"
+#include "fsl_debug_console.h"
+#endif
 #include "pattern_gen.h"
 #include "memorytest.h"
 #include "logger.h"

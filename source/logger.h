@@ -15,6 +15,9 @@
 #ifdef KL25Z
 #include "fsl_debug_console.h"
 #endif
+#ifdef KL25Z_LOG
+#include "fsl_debug_console.h"
+#endif
 
 //Log_enable – begin printing log messages when called
 void log_enable();
