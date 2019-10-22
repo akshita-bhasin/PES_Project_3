@@ -1,9 +1,11 @@
 /*
- * logger.h
- *
- *  Created on: Oct 9, 2019
- *      Author: ASUS
+ * @file logger.h
+ * @brief contains function prototypes and header files for logger.c
+ * @author Akshita Bhasin and Madhukar Arora
+ * @date 10/15/2019
+ * @version 1.0
  */
+
 
 #ifndef LOGGER_H_
 #define LOGGER_H_
@@ -16,6 +18,9 @@
 #include "fsl_debug_console.h"
 #endif
 #ifdef KL25Z_LOG
+#include "fsl_debug_console.h"
+#endif
+#ifdef KL25Z_UT
 #include "fsl_debug_console.h"
 #endif
 

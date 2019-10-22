@@ -1,9 +1,10 @@
 /*
- * memorytest.h
- *
- *  Created on: Oct 9, 2019
- *      Author: ASUS
- */
+ * @file memorytest.h
+ * @brief contains function prototypes and header files for memorytest.c
+ * @author Akshita Bhasin and Madhukar Arora
+ * date 10/18/2019
+ * @version 1.0
+*/
 
 #ifndef MEMORYTEST_H_
 #define MEMORYTEST_H_

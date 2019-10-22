@@ -1,29 +1,51 @@
 /*
- * logger.c
- *
- *  Created on: Oct 9, 2019
- *      Author: ASUS
+ * @file  : logger.c
+ * @brief : contains logger implementation
+ * @author : Akshita Bhasin and Madhukar Arora
+ * @date : 10/15/2019
+ * @version 1.0
  */
 
 #include "logger.h"
 
-uint8_t logger_status=0;
+uint8_t logger_status=0; // flag to indicate if logger enabled(1) or disabled(0)
 
+/* function name : log_enable
+ * return type : void
+ * parameters : void
+ * @brief : enables the logger functionality
+ */
 void log_enable()
 {
 	logger_status=1;
 }
+
+/* function name : log_disable
+ * return type : void
+ * parameters : void
+ * @brief : disables the logger functionality
+ */
 
 void log_disable()
 {
 	logger_status=0;
 }
 
+/* function name : log_status
+ * return type : uint8_t
+ * parameters : void
+ * @brief : returns logger status
+ */
 uint8_t log_status()
 {
 	return logger_status;
 }
 
+/* function name : log_data
+ * return type : void
+ * parameters : uint8_t* seqAddr (address), size_t length(number of bytes)
+ * @brief : logs the data at a memory location
+ */
 void log_data(uint8_t * seqAddr, size_t length)
 {
 	if(logger_status==1){
@@ -50,6 +72,11 @@ void log_data(uint8_t * seqAddr, size_t length)
 	}
 }
 
+/* function name : log_string
+ * return type : void
+ * parameters : char *dispStr
+ * @brief : if logger enabled, logger logs a string
+ */
 void log_string(char * dispStr)
 {
 	if(logger_status==1) {
@@ -62,6 +89,11 @@ void log_string(char * dispStr)
 	}
 }
 
+/* function name : log_integer
+ * return type : void
+ * parameters : uint32_t * dispInt(address), size_t length(number of bytes)
+ * @brief : if logger enabled, logger logs the values at an address
+ */
 void log_integer(uint32_t * dispInt, size_t length)
 {
 	if(logger_status==1) {

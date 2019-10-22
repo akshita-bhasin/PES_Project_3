@@ -1,8 +1,10 @@
 /*
- * main.h
+ * @file main.h
+ * @brief includes header files required for executing main.c
  *
- *  Created on: Oct 9, 2019
- *      Author: ASUS
+ *  @author Akshita Bhasin and Madhukar Arora
+ *  @date 10/17/2019
+ *  @version 1.0
  */
 
 #ifndef MAIN_H_
